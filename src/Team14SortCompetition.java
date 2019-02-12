@@ -124,6 +124,10 @@ public class Team14SortCompetition extends SortCompetition
                 temp[i]=arr[j][i];
             }
             insertionSort(temp,0,temp.length-1);
+            for (int i = 0; i < arr[j].length; i++)
+            {
+                arr [j] [i] = temp [i];
+            }
             median[j] = getMedian(temp);
         }
         insertionSort(median,0,median.length-1);
